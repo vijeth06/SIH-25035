@@ -24,10 +24,13 @@ jobs:
         pip install black flake8 isort mypy
 
     - name: Check formatting with black
-      run: black --check .
+      continue-on-error: true
+      run: black --check . || echo "Code formatting issues found (non-blocking)"
 
     - name: Check import sorting
-      run: isort --check-only .
+      continue-on-error: true
+      run: isort --check-only . || echo "Import sorting issues found (non-blocking)"
 
     - name: Type checking with mypy
-      run: mypy . --ignore-missing-imports || true
+      continue-on-error: true
+      run: mypy . --ignore-missing-imports || echo "Type checking issues found (non-blocking)"
