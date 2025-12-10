@@ -1,0 +1,62 @@
+[
+  {
+    "comment_id": 101,
+    "timestamp": "2025-01-09T10:00:00Z",
+    "comment_text": "The proposed regulation addresses critical gaps in our current data protection framework. I support the comprehensive approach taken.",
+    "user_category": "Legal Expert",
+    "section_reference": "Introduction",
+    "metadata": {
+      "user_type": "professional",
+      "organization": "Privacy Law Institute",
+      "location": "National Capital Region"
+    }
+  },
+  {
+    "comment_id": 102,
+    "timestamp": "2025-01-09T11:30:00Z",
+    "comment_text": "Implementation costs will be significant for our industry. Request consideration of phased rollout with support for smaller players.",
+    "user_category": "Industry Association",
+    "section_reference": "Section 4",
+    "metadata": {
+      "user_type": "organization",
+      "organization": "Tech Industry Association",
+      "member_count": 250
+    }
+  },
+  {
+    "comment_id": 103,
+    "timestamp": "2025-01-09T14:20:00Z",
+    "comment_text": "As a citizen, I'm pleased to see strong privacy protections being proposed. This regulation will help restore trust in digital services.",
+    "user_category": "Public",
+    "section_reference": "General",
+    "metadata": {
+      "user_type": "individual",
+      "age_group": "35-44",
+      "education": "graduate"
+    }
+  },
+  {
+    "comment_id": 104,
+    "timestamp": "2025-01-09T16:45:00Z",
+    "comment_text": "The enforcement mechanisms need strengthening. Without proper oversight, even good regulations fail to achieve their objectives.",
+    "user_category": "Civil Society",
+    "section_reference": "Section 7",
+    "metadata": {
+      "user_type": "organization",
+      "organization": "Citizens Privacy Coalition",
+      "focus_area": "digital rights"
+    }
+  },
+  {
+    "comment_id": 105,
+    "timestamp": "2025-01-09T18:10:00Z",
+    "comment_text": "International harmonization should be considered to avoid creating trade barriers while maintaining high privacy standards.",
+    "user_category": "International",
+    "section_reference": "Section 6",
+    "metadata": {
+      "user_type": "organization",
+      "organization": "Global Trade Council",
+      "country": "Multiple"
+    }
+  }
+]

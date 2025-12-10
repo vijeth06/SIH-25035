@@ -1,0 +1,18 @@
+# Sample Consultation Comments - CSV Format,,,,
+,,,,
+comment_id,timestamp,comment_text,user_category,section_reference
+1,09-01-2025 10:30,I strongly support this regulation as it will provide much-needed protection for consumer data privacy. The provisions are comprehensive and well-thought-out.,Public,Section 3.1
+2,09-01-2025 11:15,"While I appreciate the intent behind this legislation, I'm concerned about the implementation timeline. Small businesses need more time to comply with these requirements.",Business,Section 5.2
+3,09-01-2025 12:00,This is an excellent initiative that aligns with international best practices. I particularly appreciate the clear definitions and scope provided in the draft.,Academic,Section 1.2
+4,09-01-2025 12:45,The compliance costs outlined in this section seem excessive for startups and SMEs. Consider providing tiered compliance requirements based on company size.,Business,Section 4.1
+5,09-01-2025 13:30,I suggest adding more specific guidance on cross-border data transfer mechanisms. The current language is too vague and may lead to interpretation issues.,Legal,Section 6.3
+6,09-01-2025 14:15,Thank you for providing this opportunity for public consultation. The transparent approach to policy making is commendable and should be continued.,Public,General
+7,09-01-2025 15:00,The penalties mentioned in this section are appropriate and necessary to ensure organizations take data protection seriously. Strong enforcement is crucial.,Legal,Section 7.1
+8,09-01-2025 15:45,I'm confused about the relationship between this regulation and existing privacy laws. More clarity is needed on how they will interact.,Public,Section 2.3
+9,09-01-2025 16:30,This regulation will significantly impact our industry operations. We need more consultation with affected stakeholders before finalizing these provisions.,Business,Section 4.2
+10,09-01-2025 17:15,The proposed framework is comprehensive but may benefit from clearer implementation guidelines and practical examples for better understanding.,Academic,Section 5.1
+11,09-01-2025 18:00,I fully endorse the privacy-by-design approach outlined in this section. It reflects modern data protection principles and global standards.,Tech Industry,Section 3.2
+12,09-01-2025 18:45,The notification requirements seem burdensome for smaller organizations. Consider streamlining the process while maintaining transparency.,Business,Section 8.1
+13,09-01-2025 19:30,This initiative demonstrates the government's commitment to protecting citizen privacy rights. The public interest is clearly prioritized.,Civil Society,General
+14,09-01-2025 20:15,The technical requirements in this section need more detailed specifications. Current descriptions are too high-level for practical implementation.,Tech Industry,Section 9.2
+15,09-01-2025 21:00,I appreciate the balanced approach between privacy protection and business innovation. The regulation strikes a good balance.,Business,Section 1.1

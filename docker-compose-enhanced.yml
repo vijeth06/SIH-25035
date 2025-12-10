@@ -1,0 +1,79 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7.0
+    container_name: econsult-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: securepassword123
+      MONGO_INITDB_DATABASE: econsultation
+    volumes:
+      - mongodb_data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    networks:
+      - econsult-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend API Service
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: econsult-backend
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    environment:
+      - MONGODB_URL=mongodb://admin:securepassword123@mongodb:27017/econsultation?authSource=admin
+      - SECRET_KEY=your-super-secret-key-change-in-production
+      - ENVIRONMENT=production
+      - LOG_LEVEL=INFO
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app/backend
+      - ./models:/app/models
+      - ./logs:/app/logs
+    networks:
+      - econsult-network
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+
+  # Streamlit Dashboard
+  dashboard:
+    build:
+      context: .
+      dockerfile: dashboard/Dockerfile
+    container_name: econsult-dashboard
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    environment:
+      - API_BASE_URL=http://backend:8001
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+    depends_on:
+      - backend
+    volumes:
+      - ./dashboard:/app/dashboard
+      - ./models:/app/models
+    networks:
+      - econsult-network
+    command: streamlit run dashboard/main.py --server.port 8501 --server.address 0.0.0.0
+
+volumes:
+  mongodb_data:
+    driver: local
+
+networks:
+  econsult-network:
+    driver: bridge

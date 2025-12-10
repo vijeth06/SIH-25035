@@ -1,0 +1,11 @@
+stakeholder_type,policy_area,comment,sentiment,confidence
+General Public,Labour Law,We wholeheartedly endorse these labor protection measures. They will significantly improve worker rights.,positive,0.695
+General Public,Corporate Governance,The framework lacks clarity in several key areas and may create compliance challenges for smaller organizations,positive,0.8901
+General Public,Data Protection,This is a standard policy update that aligns with existing regulations. No major concerns or benefits,neutral,0.7249
+General Public,Financial Services,Excellent initiative! This will make banking more accessible for rural communities and enhance financial inclusion.,negative,0.6983
+General Public,Product Safety,Deeply disappointed with the weak safety standards. This policy fails to protect consumers from harmful products.,neutral,0.7899
+General Public,Innovation Policy,The policy shows promise but requires more detailed guidelines for implementation and monitoring to be effective.,positive,0.6493
+General Public,Tax Reform,We appreciate the government's effort to simplify tax procedures. This will reduce compliance burden for small businesses.,neutral,0.8808
+Environmental Group,Climate Policy,This policy is a complete disaster for climate action. It prioritizes short-term profits over long-term sustainability.,neutral,0.6261
+General Public,Professional Standards,The proposed standards are adequate and maintain the status quo without significant improvement in professional quality.,positive,0.9454
+General Public,Healthcare Reform,I love these healthcare reforms! They will make medical care more affordable and accessible for families like mine.,positive,0.8703

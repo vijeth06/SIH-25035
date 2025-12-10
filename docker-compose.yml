@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: sentiment-backend:latest
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DATABASE_URL=sqlite:///./sentiment_engine.db
+      - MODEL_CACHE_DIR=/app/models
+      - DEBUG=false
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./sentiment_engine.db:/app/sentiment_engine.db
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+

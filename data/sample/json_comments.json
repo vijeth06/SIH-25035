@@ -1,0 +1,36 @@
+{
+  "comments": [
+    {
+      "id": "C001",
+      "comment": "The digital transformation initiative is well-planned and addresses modern challenges effectively.",
+      "law_section": "Digital Governance Act - Section 5",
+      "stakeholder_type": "Technology Expert",
+      "location": "Bangalore",
+      "submitted_at": "2025-01-20 09:30:00"
+    },
+    {
+      "id": "C002", 
+      "comment": "I'm worried about data privacy implications in this new framework. More safeguards are needed.",
+      "law_section": "Digital Governance Act - Section 3",
+      "stakeholder_type": "Privacy Advocate",
+      "location": "Delhi",
+      "submitted_at": "2025-01-20 11:15:00"
+    },
+    {
+      "id": "C003",
+      "comment": "This represents a significant step towards modernizing our governance structure. Fully endorsed.",
+      "law_section": "Digital Governance Act - Section 1", 
+      "stakeholder_type": "Government Official",
+      "location": "Mumbai",
+      "submitted_at": "2025-01-20 14:45:00"
+    },
+    {
+      "id": "C004",
+      "comment": "The implementation costs seem excessive and may burden taxpayers unnecessarily.",
+      "law_section": "Digital Governance Act - Section 7",
+      "stakeholder_type": "Taxpayer Association",
+      "location": "Chennai",
+      "submitted_at": "2025-01-20 16:20:00"
+    }
+  ]
+}

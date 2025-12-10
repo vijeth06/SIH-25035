@@ -1,0 +1,173 @@
+/* MCA21-inspired Streamlit theme overrides */
+:root{
+  --mca-blue:#0A539B; --mca-teal:#0C9; --mca-navy:#083B6E; --mca-bg:#F2F7FF; --mca-text:#1F2937;
+}
+
+/******** Global ********/ 
+html, body {background: var(--mca-bg)!important;}
+.block-container{
+  max-width: 100%!important; 
+  padding-top: 0 !important;   /* ✅ no white space */
+  margin-top: 0 !important;    /* ✅ no white space */
+  padding-left: 1rem; 
+  padding-right: 1rem;
+}
+
+/******** MCA Government Bar + Header (above sticky app header) ********/
+.mca-topline{height:4px; background:#7f001a}
+
+/* 🔹 Blue straight line above MCA header */
+.mca-dark-blue-bar{
+  height:45px;                  
+  background:var(--mca-navy);
+  width:100vw;                  /* ✅ full viewport width */
+  margin:0 !important;          /* ✅ remove gap */
+  padding:0 !important;
+  border:none !important;       /* ✅ remove black line */
+  box-shadow:none !important;   /* ✅ remove default Streamlit shadow */
+  position:relative;
+  left:0;
+  top:0;
+}
+
+.mca-utility{background:#0A2240; color:#fff; font-size:12px;}
+.mca-utility .inner{max-width: 1400px; margin:0 auto; padding:6px 16px; display:flex; align-items:center; justify-content:space-between; gap:10px}
+.mca-utility a{color:#eaf2ff; text-decoration:none; margin-right:12px}
+.mca-utility .right{display:flex; align-items:center; gap:12px}
+.mca-utility select{background:#102b4f; color:#fff; border:1px solid #2f4c73; border-radius:4px; padding:2px 6px}
+.mca-utility button{background:#102b4f; color:#fff; border:1px solid #2f4c73; border-radius:4px; padding:2px 8px; cursor:pointer}
+.mca-utility button:hover{background:#15345c}
+
+.mca-gov-header{background:#fff; border-bottom:1px solid #e5ecf5; position:relative; z-index:1001}
+.mca-gov-header .inner{max-width:1400px; margin:0 auto; padding:16px}
+.mca-gov-header .row{display:flex; align-items:center; justify-content:space-between; gap:24px}
+
+/* 🔹 FIXED: Make emblem & MCA letters same height */
+.mca-gov-header .brand{
+  display:flex;
+  align-items:stretch;   
+  gap:16px;
+}
+.mca-gov-header .mca-emblem {
+  height: 200px;
+  max-height:165px;   
+  width: auto;
+  object-fit: contain;
+  align-self: center; 
+  filter: contrast(1.1) brightness(0.95);
+}
+
+.mca-gov-header .title{display:flex; align-items:flex-start; gap:12px}
+.mca-gov-header .mca-title-grid{display:flex; flex-direction:column; gap:6px}
+.mca-gov-header .mca-title-grid .r{display:flex; align-items:center; gap:12px}
+.mca-gov-header .mca-title-grid .word{font-size:26px; font-weight:800; color:#0a2b4e; letter-spacing:1px; line-height:1.1}
+.mca-gov-header .mca-title-grid .box{display:inline-block; background:#0a2b4e; color:#fff; font-weight:800; padding:6px 10px; border-radius:4px; letter-spacing:1px}
+.mca-gov-header .mca-letters{display:flex; flex-direction:column; gap:6px}
+.mca-gov-header .mca-letters span{display:inline-block; background:#0a2b4e; color:#fff; font-weight:800; padding:6px 10px; border-radius:4px; letter-spacing:1px}
+.mca-gov-header .text .line1,
+.mca-gov-header .text .line2,
+.mca-gov-header .text .line3{font-size:26px; font-weight:800; color:#0a2b4e; letter-spacing:1px; line-height:1.1}
+.mca-gov-header .text .govline{font-size:14px; font-weight:700; color:#1a73b7; letter-spacing:1px; margin-top:6px}
+.mca-gov-header .right-info{display:flex; flex-direction:column; align-items:flex-start; gap:6px; flex:1; border-left:2px solid #e3e7ef; padding-left:24px; color:#12263a}
+.mca-gov-header .right-info .tagline-title{font-size:22px; font-weight:800; text-transform:uppercase; letter-spacing:.5px}
+.mca-gov-header .roles{margin-top:2px; display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+.mca-gov-header .role{font-weight:700}
+.mca-gov-header .role.regulator{color:#F59E0B}
+.mca-gov-header .role.integrator{color:#10B981}
+.mca-gov-header .role.facilitator{color:#EF4444}
+.mca-gov-header .role.educator{color:#1D4ED8}
+
+/******** Header ********/
+.mca-topbar{
+    position: sticky; 
+    top: 0; 
+    z-index: 999; 
+    background: linear-gradient(90deg,var(--mca-navy),var(--mca-blue)); 
+    color:#fff; 
+    padding: 12px 0; 
+    box-shadow:0 2px 8px rgba(0,0,0,.15); 
+    border-bottom: 4px solid #FEC300;
+    width: 100vw; 
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+.mca-topbar .bar-inner{
+    max-width:none; 
+    width:100%;
+    margin:0; 
+    padding: 0 20px;
+    display:flex; 
+    align-items:center; 
+    justify-content:flex-start; 
+    gap:20px;
+}
+.mca-topbar .brand{
+    display:flex; 
+    align-items:center; 
+    gap:12px; 
+    font-weight:700; 
+  font-size:1.1rem;
+  color:#ffffff;
+  text-shadow:0 1px 4px rgba(0,0,0,0.35);
+    margin-right: auto;
+}
+.mca-topbar .brand img{
+    height:32px; 
+    width:auto;
+}
+.mca-topbar .nav{
+    display:flex; 
+    gap:24px; 
+    flex-wrap:wrap; 
+    align-items:center;
+}
+.mca-topbar .nav a{
+  color:#ffffff !important;
+    text-decoration:none; 
+  font-weight:700; 
+    font-size:0.95rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+  transition: all 0.3s ease;
+  text-shadow:0 1px 4px rgba(0,0,0,0.55);
+  letter-spacing: 0.2px;
+}
+.mca-topbar .nav a:hover{
+  color:#fff; 
+  background: rgba(255,255,255,0.15);
+}
+
+/* Smooth anchor scrolling and offset for sticky header */
+html{scroll-behavior:smooth}
+a[id]{scroll-margin-top:100px}
+
+/******** Cards ********/
+.mca-card{background:#fff; border-radius:12px; padding:16px; box-shadow:0 8px 24px rgba(2,32,71,.05); border:1px solid #e8eef7; margin-bottom:18px}
+.mca-card h3{margin:0 0 8px 0; color:var(--mca-navy)}
+
+/******** Sidebar (hidden) ********/
+section[data-testid="stSidebar"]{display:none !important}
+button[kind="header"], [data-testid="collapsedControl"]{display:none !important}
+
+/******** Buttons ********/
+.stButton>button{border-radius:10px; padding:.6rem 1rem; border:1px solid #d9e2f2}
+.stButton>button[kind="primary"], .stButton>button:hover{background:var(--mca-blue); color:#fff; border-color:var(--mca-blue)}
+
+/******** Tabs ********/
+.stTabs [data-baseweb="tab-list"]{gap:8px}
+.stTabs [data-baseweb="tab"]{background:#fff; border-radius:8px; border:1px solid #e4ecf7}
+.stTabs [aria-selected="true"]{border-color:var(--mca-blue)}
+
+/******** Metrics ********/
+[data-testid="stMetricValue"]{color:var(--mca-navy)}
+
+/******** Remove Streamlit default menu & line ********/
+#MainMenu {visibility: hidden;}
+header [data-testid="stActionButton"] {display: none !important;}
+header [data-testid="stToolbar"] {display: none !important;}
+header {
+  margin:0 !important;         /* ✅ no space */
+  padding:0 !important;
+  border:none !important;
+  box-shadow:none !important;
+}
